@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'find_work'=> 'index#find_work'
+
+  get 'manage_work'=>'index#manage_work'
+
+  root 'index#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
