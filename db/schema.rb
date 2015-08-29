@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 20150829204259) do
     t.datetime "updated_at",  null: false
   end
 
-<<<<<<< HEAD
   create_table "skills", force: :cascade do |t|
-=======
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -64,16 +66,12 @@ ActiveRecord::Schema.define(version: 20150829204259) do
 
   create_table "requirements", force: :cascade do |t|
     t.integer  "company_id"
->>>>>>> 9f1237315227c416ebaa375f51204e5adb63c3ad
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-<<<<<<< HEAD
-=======
 
   add_index "requirements", ["company_id"], name: "index_requirements_on_company_id"
->>>>>>> 9f1237315227c416ebaa375f51204e5adb63c3ad
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
