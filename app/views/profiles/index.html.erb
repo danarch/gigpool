@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Age</th>
+      <th>Address l1</th>
+      <th>Address l2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zipcode</th>
+      <th>Phone number</th>
+      <th>Phone model</th>
+      <th>Driver license</th>
+      <th>Insurance</th>
+      <th>Car</th>
+      <th>Car make</th>
+      <th>Car model</th>
+      <th>Car year</th>
+      <th>Education level</th>
+      <th>School</th>
+      <th>Grad year</th>
+      <th>Major</th>
+      <th>Lift weight</th>
+      <th>Tote number</th>
+      <th>Tote reason</th>
+      <th>Discovery</th>
+      <th>Bike</th>
+      <th>Moped</th>
+      <th>Motorcycle</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.first_name %></td>
+        <td><%= profile.last_name %></td>
+        <td><%= profile.age %></td>
+        <td><%= profile.address_l1 %></td>
+        <td><%= profile.address_l2 %></td>
+        <td><%= profile.city %></td>
+        <td><%= profile.state %></td>
+        <td><%= profile.zipcode %></td>
+        <td><%= profile.phone_number %></td>
+        <td><%= profile.phone_model %></td>
+        <td><%= profile.driver_license %></td>
+        <td><%= profile.insurance %></td>
+        <td><%= profile.car %></td>
+        <td><%= profile.car_make %></td>
+        <td><%= profile.car_model %></td>
+        <td><%= profile.car_year %></td>
+        <td><%= profile.education_level %></td>
+        <td><%= profile.school %></td>
+        <td><%= profile.grad_year %></td>
+        <td><%= profile.major %></td>
+        <td><%= profile.lift_weight %></td>
+        <td><%= profile.tote_number %></td>
+        <td><%= profile.tote_reason %></td>
+        <td><%= profile.discovery %></td>
+        <td><%= profile.bike %></td>
+        <td><%= profile.moped %></td>
+        <td><%= profile.motorcycle %></td>
+        <td><%= profile.references %></td>
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>
