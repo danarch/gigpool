@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skills
   get 'find_work'=> 'index#find_work'
 
   get 'manage_work'=>'index#manage_work'
