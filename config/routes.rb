@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :skills
+  resources :companies
+  resources :profiles
   devise_for :users
 
   get 'find_work'=> 'index#find_work'
