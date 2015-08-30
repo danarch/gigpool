@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :skills
   resources :companies
+  resources :skills
   resources :profiles
   devise_for :users
 

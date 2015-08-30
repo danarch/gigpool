@@ -1,8 +1,17 @@
 <h1>Index#find_work</h1>
 <p>Find me in app/views/index/find_work.html.erb</p>
 
-
+<div class="row">
+	
 <% @skill.each do |skill|%>
-	<%= skill.name%>
+ <div class="col-md-4">
+                <div class="panel-body">
+	<p><%= check_box_tag(:skill)%>
+	<%= skill.name%></p>
+				</div>
+			</div>
+		</div>
+	
 
 <%end%>
+<%=  link_to "Find Jobs", companies_path %>
