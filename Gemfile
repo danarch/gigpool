@@ -14,15 +14,21 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
-gem 'angularjs-rails'
 gem 'haml-rails'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'byebug'
-
   gem 'web-console', '~> 2.0'
-
+  gem 'faker'
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
 end
