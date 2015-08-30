@@ -2,16 +2,16 @@
 <p>Find me in app/views/index/find_work.html.erb</p>
 
 <div class="row">
-	
-<% @skill.each do |skill|%>
- <div class="col-md-4">
-                <div class="panel-body">
-	<p><%= check_box_tag(:skill)%>
-	<%= skill.name%></p>
-				</div>
-			</div>
-		</div>
-	
+<h4>I can use</h4>
 
-<%end%>
-<%=  link_to "Find Jobs", companies_path %>
+ 	<ul class="container-fluid">
+    	<% @skill.each do |skill| %>
+    		<div class="col-md-3">
+    			<%= check_box_tag(:skill)%>
+    			<%= skill.name %>
+    		</div>
+    	<% end %>
+    </ul><br />
+
+<%=  link_to "Find Jobs", companies_path, class: "btn btn-success"%>
+	
