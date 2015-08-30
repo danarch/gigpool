@@ -1,6 +1,8 @@
 class IndexController < ApplicationController
 
 def home
+	@skill = Skill.all 
+	@profile = Profile.new
 end
 
 def find_work
