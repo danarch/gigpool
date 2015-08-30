@@ -12,7 +12,7 @@ FactoryGirl.define do
     zipcode           {Faker::Address.zip_code}
     phone_number      {Faker::PhoneNumber.cell_phone}
     phone_model       {["iPhone","Android"].sample}
-    driver_license    {[true, false].sample ? Faker::Number.number(10) : nil}
+    driver_license    {[true, false].sample ? Faker::Number.number(10).to_s : nil}
     insurance         {[true, false].sample}
     car               { driver_license.nil? ? false : [true, false].sample}
     car_make          { car ? Faker::App.name : nil}
