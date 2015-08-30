@@ -4,6 +4,7 @@ def home
 end
 
 def find_work
+	
 end
 
 def manage_work
