@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(version: 20150829204259) do
 
   add_index "requirements", ["company_id"], name: "index_requirements_on_company_id"
 
+  create_table "skills", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
