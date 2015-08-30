@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829204259) do
+ActiveRecord::Schema.define(version: 20150830145240) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20150829204259) do
     t.string   "city"
     t.string   "state"
     t.integer  "zipcode"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.string   "phone_model"
-    t.integer  "driver_license"
+    t.string   "driver_license"
     t.boolean  "insurance"
     t.boolean  "car"
     t.string   "car_make"

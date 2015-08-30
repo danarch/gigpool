@@ -1,0 +1,11 @@
+%h1 Index#find_work
+%p Find me in app/views/index/find_work.html.erb
+.row
+  %h4 I can use
+  %ul.container-fluid
+    - @skill.each do |skill|
+      .col-md-3
+        = check_box_tag(:skill)
+        = skill.name
+  %br/
+  = link_to "Find Jobs", companies_path, class: "btn btn-success"
