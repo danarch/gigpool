@@ -48,10 +48,12 @@
               %input.form-control{:placeholder => "Search", :type => "text"}/
             %button.btn.btn-default{:type => "submit"} Submit
           %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{:href => "#"} Sign Up
-            %li
-              %a{:href => "#"} Sign In
+            - if user_signed_in?
+              %li= link_to "Profile", root_path, method: :delete
+              %li= link_to "Sign Out", destroy_user_session_path, method: :delete
+            - else
+              %li= link_to "Sign In", new_user_session_path
+              %li= link_to "Sign Up", new_user_registration_path
         / /.navbar-collapse
       / /.container-fluid
     .container
@@ -61,6 +63,5 @@
             %a.close{"data-dismiss" => "alert"} ×
             %div{:id => "flash_#{flash_class name}"}
               = msg
-    .jumbotron
-      .container
-        = yield
+    .container
+      = yield
