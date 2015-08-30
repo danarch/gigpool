@@ -1,0 +1,88 @@
+%p#notice= notice
+%p
+  %strong First name:
+  = @profile.first_name
+%p
+  %strong Last name:
+  = @profile.last_name
+%p
+  %strong Age:
+  = @profile.age
+%p
+  %strong Address l1:
+  = @profile.address_l1
+%p
+  %strong Address l2:
+  = @profile.address_l2
+%p
+  %strong City:
+  = @profile.city
+%p
+  %strong State:
+  = @profile.state
+%p
+  %strong Zipcode:
+  = @profile.zipcode
+%p
+  %strong Phone number:
+  = @profile.phone_number
+%p
+  %strong Phone model:
+  = @profile.phone_model
+%p
+  %strong Driver license:
+  = @profile.driver_license
+%p
+  %strong Insurance:
+  = @profile.insurance
+%p
+  %strong Car:
+  = @profile.car
+%p
+  %strong Car make:
+  = @profile.car_make
+%p
+  %strong Car model:
+  = @profile.car_model
+%p
+  %strong Car year:
+  = @profile.car_year
+%p
+  %strong Education level:
+  = @profile.education_level
+%p
+  %strong School:
+  = @profile.school
+%p
+  %strong Grad year:
+  = @profile.grad_year
+%p
+  %strong Major:
+  = @profile.major
+%p
+  %strong Lift weight:
+  = @profile.lift_weight
+%p
+  %strong Tote number:
+  = @profile.tote_number
+%p
+  %strong Tote reason:
+  = @profile.tote_reason
+%p
+  %strong Discovery:
+  = @profile.discovery
+%p
+  %strong Bike:
+  = @profile.bike
+%p
+  %strong Moped:
+  = @profile.moped
+%p
+  %strong Motorcycle:
+  = @profile.motorcycle
+%p
+  %strong References:
+  = @profile.references
+= link_to 'Edit', edit_profile_path(@profile)
+|
+= link_to 'Back', profiles_path
