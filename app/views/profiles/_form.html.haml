@@ -90,14 +90,14 @@
     .col-sm-3
       %h3 Transportation
       .field
-        .field
-          = f.label :car
-          %br/
-          = f.check_box :car
-        .field
-          = f.label :insurance
-          %br/
-          = f.check_box :insurance
+      .field
+        = f.label :car
+        %br/
+        = f.check_box :car
+      .field
+        = f.label :insurance
+        %br/
+        = f.check_box :insurance
         = f.label :driver_license
         %br/
         = f.number_field :driver_license
@@ -125,6 +125,6 @@
         = f.label :motorcycle
         %br/
         = f.check_box :motorcycle
-      %br/
+        %br/
       .actions
         = f.submit

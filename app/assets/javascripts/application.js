@@ -21,33 +21,3 @@
 
 
 
-'use strict'
-
-angular.module('fruit', []);
-
-function FruitCtrl($scope) {
-    $scope.fruit = [
-        {'name': 'Apple', 'colour': 'Red'},
-        {'name': 'Orange', 'colour': 'Orange'},
-        {'name': 'Banana', 'colour': 'Yellow'}];
-    
-    $scope.colourIncludes = [];
-    
-    $scope.includeColour = function(colour) {
-        var i = $.inArray(colour, $scope.colourIncludes);
-        if (i > -1) {
-            $scope.colourIncludes.splice(i, 1);
-        } else {
-            $scope.colourIncludes.push(colour);
-        }
-    }
-    
-    $scope.colourFilter = function(fruit) {
-        if ($scope.colourIncludes.length > 0) {
-            if ($.inArray(fruit.colour, $scope.colourIncludes) < 0)
-                return;
-        }
-        
-        return fruit;
-    }
-}
