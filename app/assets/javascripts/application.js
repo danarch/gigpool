@@ -19,5 +19,13 @@
 //= require jquery_ujs
 //= require_tree 
 
-
+$(document).ready(function(){
+	$("#add").hover(function(){
+		$(this).removeClass("btn-info");
+		$(this).addClass("btn-primary");
+	}, function(){
+		$(this).removeClass("btn-primary");
+		$(this).addClass("btn-info");
+	})
+})
 

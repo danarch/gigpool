@@ -1,10 +1,8 @@
 .jumbotron
   %center
-    %h1 Welcome to GIGPool
-    %p Follow the steps below to explore opportunities and apply
-    %p= link_to "Manage Work", manage_work_path, class: "btn btn-info"
+    = image_tag('gigpool.png')
 #accordion.panel-group{"aria-multiselectable" => "true", :role => "tablist"}
-  .panel.panel-default
+  .panel.panel-success
     #headingOne.panel-heading{:role => "tab"}
       %h4.panel-title
         %a{"aria-controls" => "collapseOne", "aria-expanded" => "true", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne", :role => "button"}
@@ -18,7 +16,7 @@
                 = check_box_tag(:skill)
                 = skill.name
           %br/
-  .panel.panel-default
+  .panel.panel-success
     #headingTwo.panel-heading{:role => "tab"}
       %h4.panel-title
         %a.collapsed{"aria-controls" => "collapseTwo", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo", :role => "button"}
@@ -26,7 +24,7 @@
     #collapseTwo.panel-collapse.collapse{"aria-labelledby" => "headingTwo", :role => "tabpanel"}
       .panel-body
         = render 'companies'
-  .panel.panel-default
+  .panel.panel-success
     #headingThree.panel-heading{:role => "tab"}
       %h4.panel-title
         %a.collapsed{"aria-controls" => "collapseThree", "aria-expanded" => "false", "data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree", :role => "button"}
